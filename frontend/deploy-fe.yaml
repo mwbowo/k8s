@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-fe
+spec:
+  selector:
+    matchLabels:
+      app: app-fe
+  template:
+    metadata:
+      labels:
+        app: app-fe
+    spec:
+      containers:
+      - name: app-fe
+        image: mwbowo/nodejs:front-end
+        ports:
+        - containerPort: 3000
+        env:
+          - name: REACT_APP_BACKEND_URL
+            valueFrom:
+              configMapKeyRef:
+                name: cm-fe
+                key: REACT_APP_BACKEND_URL
+                env:

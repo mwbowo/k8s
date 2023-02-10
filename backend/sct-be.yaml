@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sct-be
+type: Opaque
+data:
+  BASE_URL_PORT: NTAwMA==
+  DATABASE_DATABASE: cGVvcGxl
+  DATABASE_HOST: NTQuMjI1LjcyLjI4
+  DATABASE_PASSWORD: QXNkZmdoMTIz
+  DATABASE_PORT: MzMwNg==
+  DATABASE_USERNAME: cm9vdA==
